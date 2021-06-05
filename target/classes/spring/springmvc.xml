@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:mvc="http://www.springframework.org/schema/mvc"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+    <!-- ×¢½âÉ¨Ãè -->
+    <context:component-scan base-package="com.nclg.controller"/>
+
+	<!--
+    	ÅäÖÃ×¢½â°æ±¾µÄ´¦ÀíÆ÷Ó³ÉäÆ÷-->
+<!--  	<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"></bean>-->
+	<!--    	ÅäÖÃ×¢½â°æ¿ØÖÆÆ÷ÊÊÅäÆ÷-->
+<!--    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"></bean>-->
+	<!--    	ÅäÖÃ×¢½â°æÊÓÍ¼½âÎöÆ÷-->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"></bean>
+	<!--ºÏ²¢¿ØÖÆÆ÷Ó³ÉäÆ÷ºÍ¿ØÖÆÆ÷ÊÊÅäÆ÷-->
+	<mvc:annotation-driven></mvc:annotation-driven>
+
+
+<!--    &ndash;&gt;-->
+<!--    &lt;!&ndash; ×¢½âÇý¶¯£ºÓÃÓÚÅäÖÃ×îÐÂ°æµÄ´¦ÀíÆ÷Ó³ÉäÆ÷ºÍ´¦ÀíÆ÷ÊÊÅäÆ÷ &ndash;&gt;-->
+<!--    <mvc:annotation-driven conversion-service="conversionService"/>-->
+<!--    &lt;!&ndash; ÅäÖÃÊÓÍ¼½âÎöÆ÷ &ndash;&gt;-->
+<!--    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
+<!--		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>-->
+<!--		<property name="prefix" value="/web/"/>-->
+<!--		<property name="suffix" value=".jsp"/>-->
+<!--	</bean>-->
+
+
+<!--	&lt;!&ndash; ÅäÖÃÀ¹½ØÆ÷ &ndash;&gt;-->
+<!--	<mvc:interceptors>-->
+<!--		<mvc:interceptor>-->
+<!--			<mvc:mapping path="/**"/>-->
+<!--			&lt;!&ndash; <mvc:exclude-mapping path="/login.action"/> &ndash;&gt;-->
+<!--			<bean class="com.ztkj.interceptor.MyInterceptor"></bean>-->
+<!--		</mvc:interceptor>-->
+<!--	</mvc:interceptors>-->
+</beans>

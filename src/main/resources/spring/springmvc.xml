@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:mvc="http://www.springframework.org/schema/mvc"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+    <!-- 注解扫描 -->
+    <context:component-scan base-package="com.nclg.controller"/>
+
+	<!--
+    	配置注解版本的处理器映射器-->
+<!--  	<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"></bean>-->
+	<!--    	配置注解版控制器适配器-->
+<!--    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"></bean>-->
+	<!--    	配置注解版视图解析器-->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"></bean>
+	<!--合并控制器映射器和控制器适配器-->
+	<mvc:annotation-driven></mvc:annotation-driven>
+
+
+<!--    &ndash;&gt;-->
+<!--    &lt;!&ndash; 注解驱动：用于配置最新版的处理器映射器和处理器适配器 &ndash;&gt;-->
+<!--    <mvc:annotation-driven conversion-service="conversionService"/>-->
+<!--    &lt;!&ndash; 配置视图解析器 &ndash;&gt;-->
+<!--    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
+<!--		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>-->
+<!--		<property name="prefix" value="/web/"/>-->
+<!--		<property name="suffix" value=".jsp"/>-->
+<!--	</bean>-->
+
+
+<!--	&lt;!&ndash; 配置拦截器 &ndash;&gt;-->
+<!--	<mvc:interceptors>-->
+<!--		<mvc:interceptor>-->
+<!--			<mvc:mapping path="/**"/>-->
+<!--			&lt;!&ndash; <mvc:exclude-mapping path="/login.action"/> &ndash;&gt;-->
+<!--			<bean class="com.ztkj.interceptor.MyInterceptor"></bean>-->
+<!--		</mvc:interceptor>-->
+<!--	</mvc:interceptors>-->
+</beans>
